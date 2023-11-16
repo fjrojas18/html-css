@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario SEPE</title>
+    <link rel="stylesheet" href="docs.css" />
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <script src="bootstrap.bundle.min.js"></script>
+    <style>
+      fieldset {
+        border: 1px solid blue;
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body class="m-0 vh-100 row justify-content-center align-items-center">
+    <main class="container-fluid">
+      <form action="#" method="post" class="form-control d-inline">
+        <fieldset>
+          <legend class="text-primary m-2">DATOS DEL PARTICIPANTE</legend>
+          <div class="row input-group m-2">
+            <section class="col-6">
+              <h2 class="form-control-sm">NIF</h2>
+              <input
+                type="text"
+                name="nif"
+                id="nif"
+                class="form-control form-control-sm w-75"
+              />
+              <input type="submit" value="BUSCAR" class="btn btn-primary" />
+            </section>
+            <section class="col-6">
+              <h2 class="form-control-sm">NUSS</h2>
+              <input
+                type="text"
+                name="nuss"
+                id="nuss"
+                class="form-control form-control-sm w-75"
+                placeholder="Escribe número de la seguridad social"
+              />
+            </section>
+          </div>
+          <div class="row m-2">
+            <section class="col-4">
+              <h2 class="form-control-sm">Nombre</h2>
+              <input
+                type="text"
+                name="nombre"
+                id="nombre"
+                class="form control form-control-sm"
+              />
+            </section>
+            <section class="col-4">
+              <h2 class="form-control-sm">Primer apellido</h2>
+              <input type="text" name="apellido1" id="apellido1" />
+            </section>
+            <section class="col-4">
+              <h2 class="form-control-sm">Segundo apellido</h2>
+              <input type="text" name="apellido2" id="apellido2" />
+            </section>
+          </div>
+          <div class="row m-2">
+            <section class="col-8">
+              <h2 class="form-control-sm">Situación laboral</h2>
+              <p hidden>Selecciona una situación laboral</p>
+              <select
+                name="situacion"
+                id="situacion"
+              >
+                <option selected disabled>--Elija situación--</option>
+                <option value="desempleado">Desempleado</option>
+                <option value="ajeno">Cuenta ajena</option>
+                <option value="autonomo">Autónomo</option>
+              </select>
+            </section>
+          </div>
+          <div class="row m-2">
+            <section class="col-8" id="santerior">
+              <h2 class="form-control-sm">Situación laboral anterior</h2>
+              <p hidden>Selecciona una situación laboral anteior</p>
+              <select name="santerior" id="santerior2">
+                <option selected disabled>--Elija una opción--</option>
+                <option value="estudiante">Estudiante</option>
+                <option value="autonomo">Autónomo</option>
+                <option value="ajeno">Cuenta ajena</option>
+              </select>
+            </section>
+          </div>
+          <div class="row form-text m-2">
+            <section class="col">
+              <h2 class="form-check-inline form-control-sm">Reserva</h2>
+              <input
+                type="radio"
+                name="reserva"
+                id="si"
+                class="form-check-input form-check-inline"
+              />
+              <label for="si">Sí</label>
+              <input
+                type="radio"
+                name="reserva"
+                id="no"
+                class="form-check-input form-check-inline"
+              />
+              <label for="no">No</label>
+            </section>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend class="text-primary m-2">CARACTERÍSTICAS</legend>
+          <div class="row m-2">
+            <section class="cols">
+              <h2 class="form-check-inline form-control-sm">Desempleados selección SEPE</h2>
+              <input
+                type="radio"
+                name="desempleados"
+                id="desempleados"
+                class="form-check-imput form-check-inline"
+              />
+              <label for="si">Sí</label>
+              <input
+                type="radio"
+                name="desempleados"
+                id="desempleados2"
+                class="form-check-inline form-check-inline"
+              />
+              <label for="no">No</label>
+            </section>
+          </div>
+          <div class="row m-2">
+            <section class="col">
+              <h2 class="form-check-inline form-control-sm">Género</h2>
+              <input
+                type="radio"
+                name="gen"
+                id="masculino"
+                class="form-check-imput form-check-inline"
+              />
+              <label for="masculino">Masculino</label>
+              <input
+                type="radio"
+                name="gen"
+                id="femenino"
+                class="form-check-imput form-check-inline"
+              />
+              <label for="femenino">Femenino</label>
+            </section>
+          </div>
+          <div class="row m-2">
+            <section class="col-3">
+              <h2 class="form-control-sm">Fecha de Nacimiento</h2>
+              <input
+                type="date"
+                name="fnac"
+                id="fnac"
+                class="form-control form-control-sm w-15"
+              />
+            </section>
+          </div>
+          <div class="row d-flex m-2">
+            <section class="col-3">
+              <h2 class="form-control-sm">Teléfono</h2>
+              <input
+                type="text"
+                name="tel"
+                id="tel"
+                class="form-control form-control-sm"
+              />
+            </section>
+            <section class="col-3">
+              <h2 class="form-control-sm">Email</h2>
+              <input
+                type="text"
+                name="email"
+                id="email"
+                class="form-control form-control-sm"
+              />
+            </section>
+          </div>
+          <div class="row m-2">
+            <section class="col">
+              <h2 class="form-check-inline form-control-sm">Discapacidad</h2>
+              <input
+                type="radio"
+                name="disc"
+                id="disc"
+                class="form-check-inline"
+              />
+              <label for="disc">Sí</label>
+              <input
+                type="radio"
+                name="disc"
+                id="disc2"
+                class="form-check-inline"
+              />
+              <label for="disc">No</label>
+            </section>
+          </div>
+          <div class="row m-2">
+            <section class="col">
+              <h2 class="form-control-sm">Categoría Profesional</h2>
+              <select name="catprof" id="catprof">
+                <option selected disabled>--Elija opción--</option>
+                <option value="informatica">Informática</option>
+                <option value="electricidad">Electricidad</option>
+                <option value="enseñanza">Enseñanza</option>
+              </select>
+            </section>
+          </div>
+          <div class="row d-flex m-2">
+            <section class="col">
+              <h2 class="form-control-sm">Domicilio participante</h2>
+              <input type="text" name="domp" id="domp" />
+            </section>
+            <section class="col">
+              <h2 class="form-control-sm">CP participante</h2>
+              <input type="text" name="cp" id="cp" />
+              <input type="submit" value="ACEPTAR" class="btn btn-primary" />
+            </section>
+            <section class="col">
+              <h2 class="form-control-sm">Localidad participante</h2>
+              <select name="locpart" id="locpart">
+                <option selected disabled>........</option>
+                <option value="sevilla">Sevilla</option>
+                <option value="huelva">Huelva</option>
+                <option value="cordoba">Córdoba</option>
+                <option value="malaga">Málaga</option>
+                <option value="almeria">Almería</option>
+                <option value="jaen">Jaén</option>
+                <option value="granada">Granada</option>
+                <option value="cadiz">Cádiz</option>
+              </select>
+            </section>
+            <section class="col">
+              <h2 class="form-control-sm">Provincia participante</h2>
+              <select name="locpart" id="locpart23">
+                <option selected disabled>.......</option>
+                <option value="sevilla">Sevilla</option>
+                <option value="huelva">Huelva</option>
+                <option value="cordoba">Córdoba</option>
+                <option value="malaga">Málaga</option>
+                <option value="almeria">Almería</option>
+                <option value="jaen">Jaén</option>
+                <option value="granada">Granada</option>
+                <option value="cadiz">Cádiz</option>
+              </select>
+            </section>
+          </div>
+          <div class="row m-2">
+            <section class="col">
+              <h2 class="form-control-sm">Nivel de estudios</h2>
+              <select name="nestudios" id="nestudios">
+                <option selected disabled>........</option>
+                <option value="eso">E.S.O.</option>
+                <option value="bachillerato">Bachillerato</option>
+                <option value="fp">FP</option>
+              </select>
+            </section>
+          </div>
+          <div class="row m-2">
+            <section class="col-3">
+              <h2 class="form-control-sm">Otra situación</h2>
+              <input type="text" name="ositu" id="ositu" />
+            </section>
+          </div>
+          <div class="row d-flex m-2">
+            <section class="col">
+              <h2 class="form-control-sm">Finalizado o abandono</h2>
+              <select name="fina" id="fina">
+                <option selected disabled>--Elija una opción</option>
+                <option value="finalizado">Finalizado</option>
+                <option value="abandonado">Abandonado</option>
+              </select>
+            </section>
+            <section class="col">
+              <h2 class="form-control-sm">Causa de abandono</h2>
+              <select name="cabandono" id="cabandono">
+                <option selected disabled>--Elija opción--</option>
+                <option value="trabajo">Trabajo</option>
+                <option value="enfermedad">Enfermedad</option>
+              </select>
+            </section>
+            <section class="col">
+              <h2 class="form-control-sm">Fecha de abandono</h2>
+              <input type="date" name="fbandono" id="fbandono" />
+            </section>
+            <section class="col">
+              <h2 class="form-control-sm">Evaluación aprendizaje</h2>
+              <select name="evaprendi" id="evaprendi">
+                <option selected disabled>--Elija opción--</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </section>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend class="text-primary m-2">COLECTIVOS</legend>
+          <div class="row">
+            <section class="col">
+              <h2 class="form-check-inline form-control-sm">
+                ¿Es desempleado de larga duración?
+              </h2>
+              <input
+                type="radio"
+                name="desempleado"
+                id="desempleado"
+                class="form-check-inline form-check-imput"
+              />
+              <label for="si">Sí</label>
+              <input
+                type="radio"
+                name="desempleado"
+                id="desempleado2"
+                class="form-check-inline form-check-imput"
+              />
+              <label for="no">No</label>
+            </section>
+            <br />
+            <section class="col">
+              <h2 class="form-check-inline form-control-sm">
+                ¿Desea inscribirse en el Fichero del Sistema Nacional de
+                Garantía Juvenil?
+              </h2>
+              <input
+                type="radio"
+                name="desempleado78"
+                id="desempleado78"
+                class="form-check-inline form-check-imput"
+              />
+              <label for="si">Sí</label>
+              <input
+                type="radio"
+                name="desempleado"
+                id="desempleado10"
+                class="form-check-inline form-check-imput"
+              />
+              <label for="no">No</label>
+            </section>
+            <br />
+            <section class="col">
+              <h2 class="form-check-inline form-control-sm">¿Otros?</h2>
+              <input
+                type="radio"
+                name="desempleado"
+                id="desempleado7"
+                class="form-check-inline form-check-imput"
+              />
+              <label for="si">Sí</label>
+              <input
+                type="radio"
+                name="desempleado5"
+                id="desempleado3"
+                class="form-check-inline form-check-imput"
+              />
+              <label for="no">No</label>
+            </section>
+          </div>
+        </fieldset>
+        <div>
+            <section>
+
+            </section>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
